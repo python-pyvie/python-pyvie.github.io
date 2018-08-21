@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Pyvie - About</title>
+    <title>Pyvie - </title>
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,14 +54,61 @@
 
         <div class="span9">
         
-<section id="content" class="body">    
-    <h2 class="content-title">
-        About
-    </h2>
-    <p>We are starting to use Pelican and github.io to generate and publish websites in our research group. This repository is designed to help people get started usign Pelican and hosting your site on Github.io.  </p>
-<p>Since Pelican is great as a static Blogging software we organized this tutorial as a sequenc eof blog posts.  </p>
-<p>We hope you find this usefull... </p>
-</section>
+
+        
+
+ 
+
+    <div class='article'>
+        <a href="../connecting-your-blog-to-social-media.html"><h2>Connecting your Blog to Social Media</h2></a>
+        <div class= "well small"> Sat 01 July 2017
+
+by <a class="url fn" href="../author/.html"></a>
+ 
+
+
+ </div>
+        <div class="summary"><p>Your blog can be used to automatically feed information into social media sites such as Twitter and facebook. This post will show you how to connect your github.io site to <a href="//dlvrit.com/">dlvrit.com</a>, a service which can read your blog and post entries into your social media outlets.  </p>
+<ol>
+<li>Create an …</li></ol> <a class="btn btn-info xsmall" href="../connecting-your-blog-to-social-media.html">read more</a></div>
+    </div>	
+				
+
+ 
+        
+
+ 
+
+    <div class='article'>
+        <a href="../contact.html"><h2>Contact</h2></a>
+        <div class= "well small"> Sun 01 January 2017
+
+by <a class="url fn" href="../author/.html"></a>
+ 
+
+
+ </div>
+        <div class="summary"><p><img alt="headshot" src="../images/Feeny_Nolan.JPG" width="450"></p>
+<p>You'd probably want to upload your own contact info for other people. I'm going to leave mine here in case you have any questions on how to use pelican, github, using a different theme, or any other customizations. Please feel encouraged to reach out!</p>
+<p>Contact info:
+<a href="https://www.linkedin.com/in/nolan-feeny-375893132/">LinkedIn</a></p>
+<p>Nolan Feeny<br>
+B …</p> <a class="btn btn-info xsmall" href="../contact.html">read more</a></div>
+    </div>	
+				
+<div class="pagination">
+<ul>
+    <li class="prev"><a href="../author/.html">&larr; Previous</a></li>
+
+    <li class=""><a href="../author/.html">1</a></li>
+    <li class="active"><a href="../author/2.html">2</a></li>
+
+    <li class="next disabled"><a href="#">&rarr; Next</a></li>
+
+</ul>
+</div>
+ 
+  
         </div>
         
         <div class="span3">

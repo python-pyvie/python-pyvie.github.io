@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = 'authorname'
-SITENAME = "CMSE Pelican/Github.io tutorial"
+AUTHOR = ''
+SITENAME = "Pyvie"
 SITEURL = ''
 PATH = 'content'
 
