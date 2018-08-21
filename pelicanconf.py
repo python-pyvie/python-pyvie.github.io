@@ -29,8 +29,8 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('CMSE', 'http://cmse.msu.edu'),
-         ('MSU', 'http://www.msu.edu/'))
+LINKS = (('FAQ', ''),
+         ('DOCS', ''))
 
 # Social widget
 #SOCIAL = (('You can add links in your config file', '#'),
