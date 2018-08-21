@@ -41,6 +41,7 @@
             
             <li><a href="../pages/about.html">About</a></li>
             <li><a href="../pages/contact.html">Contact</a></li>
+            <li><a href="../pages/docs.html">Docs</a></li>
         </ul>
         </div>
         
@@ -55,6 +56,28 @@
         <div class="span9">
         
 
+        
+
+ 
+
+    <div class='article'>
+        <a href="../adding-comments-to-your-blog.html"><h2>Adding Comments to your Blog</h2></a>
+        <div class= "well small"> Sat 01 July 2017
+
+by <a class="url fn" href="../author/.html"></a>
+ 
+
+
+ </div>
+        <div class="summary"><p>Even though pelican generates static websites you can still have dynamic comments using a third party service called Disqus. </p>
+<ol>
+<li>First, create a Disqus account <a href="//disqus.com/admin/create/">here</a></li>
+<li>Once you have a Disqus account create a "new site" and point it to your github.io website.  Remember the site name you used.</li>
+<li>Open …</li></ol> <a class="btn btn-info xsmall" href="../adding-comments-to-your-blog.html">read more</a></div>
+    </div>	
+				
+
+ 
         
 
  
@@ -136,6 +159,7 @@ by <a class="url fn" href="../author/.html"></a>
                 <li><a href="../category/about.html">About</a></li>
                 <li><a href="../category/blog.html">Blog</a></li>
                 <li><a href="../category/contact.html">Contact</a></li>
+                <li><a href="../category/documents.html">Documents</a></li>
                    
             </ul>
             </div>
@@ -147,8 +171,8 @@ by <a class="url fn" href="../author/.html"></a>
                 Links
                 </li>
             
-                <li><a href="">FAQ</a></li>
-                <li><a href="">DOCS</a></li>
+                <li><a href="https://github.com/davidbutts">David Butts Github</a></li>
+                <li><a href="">hello</a></li>
             </ul>
             </div>
 
