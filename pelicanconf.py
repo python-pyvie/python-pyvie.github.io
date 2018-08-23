@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = ''
-SITENAME = "Pyvie"
+SITENAME = "Welcome to Pyvie"
 SITEURL = ''
 PATH = 'content'
 
@@ -44,10 +44,10 @@ RELATIVE_URLS = True
 # Comment following line if you want the default theme
 THEME = 'themes/tuxlite2'
 
-DISPLAY_PAGES_ON_MENU = True
-DISPLAY_CATEGORIES_ON_MENU = True
+DISPLAY_PAGES_ON_MENU = False
+DISPLAY_CATEGORIES_ON_MENU = False
 LOAD_CONTENT_CACHE = False
-
+MENUITEMS = (('About', '/pages/about.html'),('Documentation','/pages/documentation.html'),('Contact','/pages/contact.html'))
 #INDEX_SAVE_AS = 'about.html'
 #PAGE_SAVE_AS = 'about2.html'
 #PAGE_URL = 'about2.html'
