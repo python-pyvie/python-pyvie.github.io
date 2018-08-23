@@ -46,6 +46,7 @@ THEME = 'themes/tuxlite2'
 
 DISPLAY_PAGES_ON_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = True
+LOAD_CONTENT_CACHE = False
 
 #INDEX_SAVE_AS = 'about.html'
 #PAGE_SAVE_AS = 'about2.html'
