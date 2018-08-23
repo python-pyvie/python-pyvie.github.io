@@ -1,5 +1,5 @@
 Title: Welcome to Pyvie
-URL: python-pyvie.github.io
+URL:
 save_as: index.html
 
 Welcome!
