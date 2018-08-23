@@ -61,11 +61,18 @@
     </h2>
     <h1>pyvie.Movie()</h1>
 <p>Initializes a movie with file characteristics given</p>
-<h2>Parameters</h2>
+<h3>Parameters</h3>
 <p><strong> name </strong> : string . This string will be the name of the movie that is saved after rendering. A file type extension will be added on automatically, so there is no need to add one here.</p>
 <p><strong> framerate </strong> : numeric. The number is the speed of your video in frames per second.</p>
 <p><strong> file_type </strong> : string. File extension for images.</p>
 <p><strong> movie_type </strong> : string. FIle extension for movie.</p>
+<h1>pyvie.gather()</h1>
+<p>Add current frame to the video</p>
+<h1>pyvie.finalize()</h1>
+<p>Renders the added frames into a video.</p>
+<h3>Parameters</h3>
+<p><strong> open_movie </strong> : bool. If true, after a video has been rendered it will automatically be opened using your default media viewer.</p>
+<p><strong> output_notebook </strong> : bool. If true, after a video has been rendered it will be opened embedded into a Jupyter notebook.</p>
 </section>
         </div>
         
