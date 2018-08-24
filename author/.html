@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Welcome to Pyvie - </title>
+    <title>Pyvie - </title>
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,7 +34,7 @@
              <span class="icon-bar"></span>
          </a>
 
-        <a class="brand" href="..">Welcome to Pyvie</a>
+        <a class="brand" href="..">Pyvie</a>
 
         <div class="nav-collapse">
         <ul class="nav">
@@ -61,8 +61,8 @@
 
     <div class='article'>
         <div class="content-title">
-            <a href="../gallery.html"><h1>Gallery</h1></a>
-Thu 23 August 2018
+            <a href="../about.html"><h1>About</h1></a>
+Mon 01 January 2018
 
 by <a class="url fn" href="../author/.html"></a>
  
@@ -71,32 +71,7 @@ by <a class="url fn" href="../author/.html"></a>
  
         </div>
         
-        <div><h1>Sin Wave</h1>
-<p><center>
-<video width="700" height="400" controls>
-  <source src="../images/SineWaveExample.avi" type="video/avi">
-</video></p>
-<p>The example shows how to make a simple animated sine wave using the code provided below.</p>
-<p></center></p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvie</span> <span class="kn">as</span> <span class="nn">pv</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
-
-<span class="n">movie</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Movie</span><span class="p">(</span><span class="s1">&#39;SineWaveExample&#39;</span><span class="p">,</span><span class="n">framerate</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="n">dpi</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span><span class="n">file_type</span><span class="o">=</span><span class="s1">&#39;.png&#39;</span><span class="p">,</span><span class="n">movie_type</span> <span class="o">=</span> <span class="s1">&#39;.avi&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
-<span class="k">for</span> <span class="n">phi</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="kp">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span><span class="mi">300</span><span class="p">):</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">sin</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">phi</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">linewidth</span> <span class="o">=</span> <span class="mi">4</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">alpha</span><span class="o">=.</span><span class="mi">5</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Sine Wave Example&#39;</span><span class="p">,</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">22</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
-    <span class="n">movie</span><span class="o">.</span><span class="n">gather</span><span class="p">()</span>
-<span class="n">movie</span><span class="o">.</span><span class="n">finalize</span><span class="p">()</span>
-</pre></div></div>
+        <div><p>Pyvie is a Python module designed to close the gap in movie making and animation in Python. </p></div>
         <hr />
     </div>
 		
@@ -107,44 +82,17 @@ by <a class="url fn" href="../author/.html"></a>
  
 
     <div class='article'>
-        <a href="../installation.html"><h2>Installation</h2></a>
-        <div class= "well small"> Thu 23 August 2018
+        <a href="../contact.html"><h2>Contact</h2></a>
+        <div class= "well small"> Mon 01 January 2018
 
 by <a class="url fn" href="../author/.html"></a>
  
 
 
  </div>
-        <div class="summary"><h1>Dependencies</h1>
-<ul>
-<li><a href="https://docs.python.org/3/library/os.html">os</a></li>
-<li><a href="https://docs.python.org/2/library/subprocess.html">subprocess</a></li>
-<li><a href="https://matplotlib.org">matplotlib</a></li>
-<li><a href="https://ipython.org/index.html#">IPython</a></li>
-<li><a href="https://pypi.org/project/html/">html</a></li>
-<li><a href="https://www.ffmpeg.org">FFMPEG</a></li>
-</ul>
-<h1>OSX</h1>
-<h1>Linux</h1>
-<h1>Windows</h1> <a class="btn btn-info xsmall" href="../installation.html">read more</a></div>
-    </div>	
-				
-
- 
-        
-
- 
-
-    <div class='article'>
-        <a href="../about.html"><h2>About</h2></a>
-        <div class= "well small"> Tue 03 July 2018
-
-by <a class="url fn" href="../author/.html"></a>
- 
-
-
- </div>
-        <div class="summary"><p>Pyvie is a Python module designed to close the gap in movie making and animation in Python. </p> <a class="btn btn-info xsmall" href="../about.html">read more</a></div>
+        <div class="summary"><p><img alt="headshot" src="../images/pyvie_logo.png" width="450"></p>
+<h2>Contact info:</h2>
+<p>pyvie.help@gmail.com</p> <a class="btn btn-info xsmall" href="../contact.html">read more</a></div>
     </div>	
 				
 
@@ -155,7 +103,7 @@ by <a class="url fn" href="../author/.html"></a>
 
     <div class='article'>
         <a href="../documentation.html"><h2>Documentation</h2></a>
-        <div class= "well small"> Tue 03 July 2018
+        <div class= "well small"> Mon 01 January 2018
 
 by <a class="url fn" href="../author/.html"></a>
  
@@ -176,17 +124,57 @@ by <a class="url fn" href="../author/.html"></a>
  
 
     <div class='article'>
-        <a href="../contact.html"><h2>Contact</h2></a>
-        <div class= "well small"> Sun 01 January 2017
+        <a href="../gallery.html"><h2>Gallery</h2></a>
+        <div class= "well small"> Mon 01 January 2018
 
 by <a class="url fn" href="../author/.html"></a>
  
 
 
  </div>
-        <div class="summary"><p><img alt="headshot" src="../images/pyvie_logo.png" width="450"></p>
-<p>pyvie.help@gmail.com</p>
-<p>Contact info:</p> <a class="btn btn-info xsmall" href="../contact.html">read more</a></div>
+        <div class="summary"><h1>Sin Wave</h1>
+<p><center>
+<video width="700" height="400" controls>
+  <source src="../images/SineWaveExample.avi" type="video/avi">
+</video></p>
+<p>The example shows how to make a simple animated sine wave using the code provided below.</p>
+<p></center></p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvie</span> <span class="kn">as</span> <span class="nn">pv</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+<span class="n">movie</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Movie</span><span class="p">(</span><span class="s1">&#39;SineWaveExample&#39;</span><span class="p">,</span><span class="n">framerate</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="n">dpi</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span><span class="n">file_type</span><span class="o">=</span><span class="s1">&#39;.png&#39;</span><span class="p">,</span><span class="n">movie_type</span> <span class="o">=</span> <span class="s1">&#39;.avi&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">phi …</span></pre></div> <a class="btn btn-info xsmall" href="../gallery.html">read more</a></div>
+    </div>	
+				
+
+ 
+        
+
+ 
+
+    <div class='article'>
+        <a href="../installation.html"><h2>Installation</h2></a>
+        <div class= "well small"> Mon 01 January 2018
+
+by <a class="url fn" href="../author/.html"></a>
+ 
+
+
+ </div>
+        <div class="summary"><h1>Dependencies</h1>
+<ul>
+<li><a href="https://docs.python.org/3/library/os.html">os</a></li>
+<li><a href="https://docs.python.org/2/library/subprocess.html">subprocess</a></li>
+<li><a href="https://matplotlib.org">matplotlib</a></li>
+<li><a href="https://ipython.org/index.html#">IPython</a></li>
+<li><a href="https://pypi.org/project/html/">html</a></li>
+<li><a href="https://www.ffmpeg.org">FFMPEG</a></li>
+</ul>
+<h1>OSX</h1>
+<h1>Linux</h1>
+<h1>Windows</h1> <a class="btn btn-info xsmall" href="../installation.html">read more</a></div>
     </div>	
 				
 <div class="pagination">
@@ -205,7 +193,7 @@ by <a class="url fn" href="../author/.html"></a>
         
         <div class="span3">
 
-            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <!-- <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
             <ul class="nav nav-list">
                 <li class="nav-header"> 
                 Site
@@ -218,7 +206,7 @@ by <a class="url fn" href="../author/.html"></a>
 
 
             </ul>
-            </div>
+            </div> -->
 
 
             <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
@@ -244,7 +232,8 @@ by <a class="url fn" href="../author/.html"></a>
                 </li>
             
                 <li><a href="https://github.com/davidbutts">David Butts Github</a></li>
-                <li><a href="">hello</a></li>
+                <li><a href="https://murillogroupmsu.com/david-j-butts/">David Butts Homepage</a></li>
+                <li><a href="https://murillogroupmsu.com">Murillo Group Homepage</a></li>
             </ul>
             </div>
 
@@ -254,7 +243,7 @@ by <a class="url fn" href="../author/.html"></a>
     </div>     </div> 
 <footer>
 <br />
-<p><a href="..">Welcome to Pyvie</a> &copy;  2018</p>
+<p><a href="..">Pyvie</a> &copy;  2018</p>
 </footer>
 
 </div> <!-- /container -->
