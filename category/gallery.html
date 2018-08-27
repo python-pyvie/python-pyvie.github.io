@@ -71,7 +71,9 @@ by <a class="url fn" href="../author/.html"></a>
  
         </div>
         
-        <div><h1>Sin Wave</h1>
+        <div><p><a href="#sine">Sine Wave</a> | <a href="#updatingplot">Updating Plot</a> | <a href="#imshow">Imshow</a></p>
+<p><a name="sine"></a></p>
+<h1>Sine Wave</h1>
 <p><center>
 <video width="700" height="400" controls>
   <source src="../images/SineWaveExample.avi" type="video/avi">
@@ -92,6 +94,74 @@ by <a class="url fn" href="../author/.html"></a>
     <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">alpha</span><span class="o">=.</span><span class="mi">5</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Sine Wave Example&#39;</span><span class="p">,</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">22</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+    <span class="n">movie</span><span class="o">.</span><span class="n">gather</span><span class="p">()</span>
+<span class="n">movie</span><span class="o">.</span><span class="n">finalize</span><span class="p">()</span>
+</pre></div>
+
+
+<p><a name="updatingplot"></a></p>
+<h1>Updating Plot</h1>
+<p><center>
+<video width="700" height="400" controls>
+  <source src="../images/UpdatingPlotExample.avi" type="video/avi">
+</video></p>
+<p>The example shows how to make an updating plot using the code provided below.</p>
+<p></center></p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvie</span> <span class="kn">as</span> <span class="nn">pv</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+<span class="n">movie</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Movie</span><span class="p">(</span><span class="s1">&#39;UpdatingPlotExample&#39;</span><span class="p">,</span><span class="n">framerate</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">dpi</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span><span class="n">file_type</span><span class="o">=</span><span class="s1">&#39;.png&#39;</span><span class="p">,</span><span class="n">movie_type</span> <span class="o">=</span> <span class="s1">&#39;.avi&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">x_data</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">y_data</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">lower_line</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">upper_line</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">101</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
+    <span class="n">y_data</span><span class="o">.</span><span class="kp">append</span><span class="p">(</span><span class="n">t</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]))</span>
+    <span class="n">x_data</span><span class="o">.</span><span class="kp">append</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">lower_line</span><span class="o">.</span><span class="kp">append</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">upper_line</span><span class="o">.</span><span class="kp">append</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_data</span><span class="p">,</span><span class="n">lower_line</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_data</span><span class="p">,</span><span class="n">upper_line</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_data</span><span class="p">,</span><span class="n">y_data</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x_data</span><span class="p">,</span><span class="n">lower_line</span><span class="p">,</span><span class="n">upper_line</span><span class="p">,</span><span class="n">alpha</span> <span class="o">=</span> <span class="o">.</span><span class="mi">3</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">300</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Updating Plot&#39;</span><span class="p">,</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">22</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">alpha</span><span class="o">=.</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">movie</span><span class="o">.</span><span class="n">gather</span><span class="p">()</span>
+<span class="n">movie</span><span class="o">.</span><span class="n">finalize</span><span class="p">()</span>
+</pre></div>
+
+
+<p><a name="imshow"></a></p>
+<h1>Imshow</h1>
+<p><center>
+<video width="700" height="400" controls>
+  <source src="../images/ImshowExample.avi" type="video/avi">
+</video></p>
+<p>The example shows how to make a movie using imshow using the code provided below.</p>
+<p></center></p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyvie</span> <span class="kn">as</span> <span class="nn">pv</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+<span class="n">movie</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Movie</span><span class="p">(</span><span class="s2">&quot;ImshowExample&quot;</span><span class="p">,</span><span class="n">framerate</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">dpi</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span><span class="n">file_type</span><span class="o">=</span><span class="s1">&#39;.png&#39;</span><span class="p">,</span><span class="n">movie_type</span> <span class="o">=</span> <span class="s1">&#39;.avi&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="kp">zeros</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="kp">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">grid</span><span class="o">.</span><span class="kp">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="kp">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">grid</span><span class="o">.</span><span class="kp">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">grid</span><span class="p">[</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">grid</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;2D Imshow&#39;</span><span class="p">,</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">22</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
     <span class="n">movie</span><span class="o">.</span><span class="n">gather</span><span class="p">()</span>
