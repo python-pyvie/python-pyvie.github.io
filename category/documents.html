@@ -71,15 +71,25 @@ by <a class="url fn" href="../author/.html"></a>
  
         </div>
         
-        <div><h1>pyvie.Movie()</h1>
+        <div><h1>pyvie.open_movie()</h1>
+<p>Open a previously created movie.</p>
+<h3>Parameters</h3>
+<p><strong> path_to_movie </strong> : string. The <strong><em>relative</em></strong> path to the movie you want to open.</p>
+<p><strong> default_player </strong> : boolean. Open the movie externally with your default player.</p>
+<p><strong> output_notebook </strong> : boolean. Open the movie within a jupyter notebook.</p>
+<h1>pyvie.Movie()</h1>
 <p>Initializes a movie with file characteristics given</p>
 <h3>Parameters</h3>
 <p><strong> name </strong> : string . This string will be the name of the movie that is saved after rendering. A file type extension will be added on automatically, so there is no need to add one here.</p>
 <p><strong> framerate </strong> : numeric. The number is the speed of your video in frames per second.</p>
 <p><strong> file_type </strong> : string. File extension for images.</p>
 <p><strong> movie_type </strong> : string. FIle extension for movie.</p>
+<p><strong> verbose </strong> : boolean. Option to display FFMPEG output.</p>
+<p><strong> save_images </strong> : boolean. Option to save images that are produced.</p>
 <h1>pyvie.gather()</h1>
-<p>Add current frame to the video</p>
+<p>Add current frame to the video.</p>
+<h3>Parameters</h3>
+<p><strong> *args and **kwargs </strong> : Will take matplotlib.savefig() <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.savefig.html">arguments</a>.</p>
 <h1>pyvie.finalize()</h1>
 <p>Renders the added frames into a video.</p>
 <h3>Parameters</h3>
