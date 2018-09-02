@@ -61,7 +61,7 @@
     </h2>
     <h1>Some useful ideas to make better looking videos</h1>
 <h3>Clear your figure after you add each frame</h3>
-<p>If you do not want your plots to be cumlative use <code>plt.clf()</code> to clear figures between frames.</p>
+<p>If you do not want your plots to be cumulative use <code>plt.clf()</code> to clear figures between frames.</p>
 <h3>Add a blank frame to the start of your movies</h3>
 <div class="highlight"><pre><span></span>plt.plot() #make an blank plot
 my_movie.gather() #this adds the blank plot your video
@@ -74,6 +74,8 @@ my_movie.finalize()
 
 <h3>Specify the x and y limits to your plots</h3>
 <p>If you do not want your axes to shift between frames, specify their limits with <code>plt.xlim()</code> or <code>plt.ylim()</code>.</p>
+<h3>FFMPEG does not overwrite previous video files</h3>
+<p>If you are debugging, and making many movies without changing the name of the movie, pyvie will automatically add '-#' to the end of the file name. # will start at 1 and increment by one each time you run pyvie. This may produce a lot of extra movie files you don't plan on saving!</p>
 </section>
         </div>
         
