@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <!-- <title>Pyvie - Contact</title> -->
+    <!-- <title>Pyvie - Tips</title> -->
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,11 +57,23 @@
         
 <section id="content" class="body">    
    <h2 class="content-title">
-        <!-- Contact -->
+        <!-- Tips -->
     </h2>
-    <p><img alt="headshot" src="../images/pyvie_logo.png" width="450"></p>
-<h2>Contact info:</h2>
-<p>pyvie.help@gmail.com</p>
+    <h1>Some useful ideas to make better looking videos</h1>
+<h3>Clear your figure after you add each frame</h3>
+<p>If you do not want your plots to be cumlative use <code>plt.clf()</code> to clear figures between frames.</p>
+<h3>Add a blank frame to the start of your movies</h3>
+<div class="highlight"><pre><span></span>plt.plot() #make an blank plot
+my_movie.gather() #this adds the blank plot your video
+for i in range():
+    plt.plot()
+    my_movie.gather() #the rest of the frames are added here
+my_movie.finalize()
+</pre></div>
+
+
+<h3>Specify the x and y limits to your plots</h3>
+<p>If you do not want your axes to shift between frames, specify their limits with <code>plt.xlim()</code> or <code>plt.ylim()</code>.</p>
 </section>
         </div>
         

@@ -2,21 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <!-- <title>Pyvie - Contact</title> -->
+    <!-- <title>Pyvie - Tips</title> -->
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
-    <script src="../theme/html5.js"></script>
+    <script src="./theme/html5.js"></script>
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="../theme/bootstrap.min.css" rel="stylesheet">
-    <link href="../theme/bootstrap.min.responsive.css" rel="stylesheet">
-    <link href="../theme/local.css" rel="stylesheet">
-    <link href="../theme/pygments.css" rel="stylesheet">
+    <link href="./theme/bootstrap.min.css" rel="stylesheet">
+    <link href="./theme/bootstrap.min.responsive.css" rel="stylesheet">
+    <link href="./theme/local.css" rel="stylesheet">
+    <link href="./theme/pygments.css" rel="stylesheet">
 
     <!-- So Firefox can bookmark->"abo this site" -->
 
@@ -34,7 +34,7 @@
              <span class="icon-bar"></span>
          </a>
 
-        <a class="brand" href="..">Pyvie</a>
+        <a class="brand" href=".">Pyvie</a>
 
         <div class="nav-collapse">
         <ul class="nav">
@@ -54,15 +54,36 @@
     <div class="row">
 
         <div class="span9">
-        
-<section id="content" class="body">    
-   <h2 class="content-title">
-        <!-- Contact -->
-    </h2>
-    <p><img alt="headshot" src="../images/pyvie_logo.png" width="450"></p>
-<h2>Contact info:</h2>
-<p>pyvie.help@gmail.com</p>
-</section>
+    <!-- <div class='article'>
+        <div class="content-title">
+            <h1>Tips</h1>
+Mon 01 January 2018
+
+by <a class="url fn" href="./author/.html"></a>
+ 
+
+
+        </div> -->
+	
+        <div><h1>Some useful ideas to make better looking videos</h1>
+<h3>Clear your figure after you add each frame</h3>
+<p>If you do not want your plots to be cumlative use <code>plt.clf()</code> to clear figures between frames.</p>
+<h3>Add a blank frame to the start of your movies</h3>
+<div class="highlight"><pre><span></span>plt.plot() #make an blank plot
+my_movie.gather() #this adds the blank plot your video
+for i in range():
+    plt.plot()
+    my_movie.gather() #the rest of the frames are added here
+my_movie.finalize()
+</pre></div>
+
+
+<h3>Specify the x and y limits to your plots</h3>
+<p>If you do not want your axes to shift between frames, specify their limits with <code>plt.xlim()</code> or <code>plt.ylim()</code>.</p></div>
+	
+        <hr>
+
+    </div>
         </div>
         
         <div class="span3">
@@ -73,8 +94,8 @@
                 Site
                 </li>
             
-                <li><a href="../archives.html">Archives</a>
-                <li><a href="../tags.html">Tags</a>
+                <li><a href="./archives.html">Archives</a>
+                <li><a href="./tags.html">Tags</a>
 
 
 
@@ -89,12 +110,12 @@
                 Categories
                 </li>
                 
-                <li><a href="../category/about.html">About</a></li>
-                <li><a href="../category/contact.html">Contact</a></li>
-                <li><a href="../category/documents.html">Documents</a></li>
-                <li><a href="../category/gallery.html">Gallery</a></li>
-                <li><a href="../category/installation.html">Installation</a></li>
-                <li><a href="../category/tips.html">Tips</a></li>
+                <li><a href="./category/about.html">About</a></li>
+                <li><a href="./category/contact.html">Contact</a></li>
+                <li><a href="./category/documents.html">Documents</a></li>
+                <li><a href="./category/gallery.html">Gallery</a></li>
+                <li><a href="./category/installation.html">Installation</a></li>
+                <li><a href="./category/tips.html">Tips</a></li>
                    
             </ul>
             </div>
@@ -105,13 +126,13 @@
                 <li class="nav-header"> 
                 Pages
                 </li>
-		<li><a href="../pages/about.html">About</a></li>
-		<li><a href="../pages/contact.html">Contact</a></li>
-		<li><a href="../pages/documentation.html">Documentation</a></li>
-		<li><a href="../pages/gallery.html">Gallery</a></li>
-		<li><a href="../">Pyvie</a></li>
-		<li><a href="../pages/installation.html">Installation</a></li>
-		<li><a href="../pages/tips.html">Tips</a></li>
+		<li><a href="./pages/about.html">About</a></li>
+		<li><a href="./pages/contact.html">Contact</a></li>
+		<li><a href="./pages/documentation.html">Documentation</a></li>
+		<li><a href="./pages/gallery.html">Gallery</a></li>
+		<li><a href="./">Pyvie</a></li>
+		<li><a href="./pages/installation.html">Installation</a></li>
+		<li><a href="./pages/tips.html">Tips</a></li>
 	    </div>
 
             <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
@@ -131,12 +152,12 @@
     </div>     </div> 
 <footer>
 <br />
-<p><a href="..">Pyvie</a> &copy;  2018</p>
+<p><a href=".">Pyvie</a> &copy;  2018</p>
 </footer>
 
 </div> <!-- /container -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script src="../theme/bootstrap-collapse.js"></script>
+<script src="./theme/bootstrap-collapse.js"></script>
  
 </body>
 </html>
