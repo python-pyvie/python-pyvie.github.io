@@ -64,7 +64,7 @@
 <p><b><font size="4">Parameters</font></b></p>
 <p><strong> path_to_movie </strong> : string. The <strong><em>relative</em></strong> path to the movie you want to open.</p>
 <p><strong> default_player </strong> = True: boolean. Open the movie externally with your default player.</p>
-<p><strong> output_notebook </strong> = False: boolean. Open the movie within a jupyter notebook.
+<p><strong> output_notebook </strong> = False: boolean. Open the movie within a jupyter notebook. <strong>Note</strong>: This feature is in development, it may or may not work in your browser.
 <hr></p>
 <h1>pyvie.Movie()</h1>
 <p>Initializes a movie with file characteristics given by the parameters below.</p>
@@ -86,8 +86,8 @@
 <h1>pyvie.Movie.finalize()</h1>
 <p>Renders a video from all the frames gathered from pyvie.Movie.gather().</p>
 <p><b><font size="4">Parameters</font></b></p>
-<p><strong> open_movie </strong> : bool. If true, after a video has been rendered it will automatically be opened using your default media viewer.</p>
-<p><strong> output_notebook </strong> : bool. If true, after a video has been rendered it will be opened embedded into a Jupyter notebook.</p>
+<p><strong> open_movie </strong> = False: bool. If true, after a video has been rendered it will automatically be opened using your default media viewer.</p>
+<p><strong> output_notebook </strong> = False: bool. If true, after a video has been rendered it will be opened embedded into a Jupyter notebook. <strong>Note</strong>: This feature is in development, it may or may not work in your browser.</p>
 </section>
         </div>
         
